@@ -4,7 +4,11 @@
   "version": "1.0.0",
   "main": "build/index.js",
   "author": "Marcos Corona",
-  "keywords": ["scraper", "symfonycast", "knpuniversity"],
+  "keywords": [
+    "scraper",
+    "symfonycast",
+    "knpuniversity"
+  ],
   "license": "MIT",
   "scripts": {
     "start": "tsc && node ./build/index.js",
@@ -22,6 +26,7 @@
     "@types/node-schedule": "^1.2.2",
     "@types/node-wit": "^4.2.2",
     "@types/numeral": "0.0.22",
+    "@types/ora": "^1.3.4",
     "@types/puppeteer": "^1.5.0",
     "eslint": "^4.18.2",
     "eslint-config-airbnb-base": "^13.0.0",
@@ -34,6 +39,7 @@
     "typescript": "^2.9.2"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "bluebird": "^3.5.1",
     "dotenv": "^5.0.1",
     "lodash": "^4.17.5",
@@ -41,6 +47,7 @@
     "node-schedule": "^1.3.0",
     "node-wit": "^5.0.0",
     "numeral": "^2.0.6",
+    "ora": "^3.0.0",
     "puppeteer": "^1.5.0"
   }
 }

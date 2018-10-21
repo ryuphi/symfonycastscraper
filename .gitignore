@@ -4,3 +4,4 @@ build
 *.jpg
 .env
 .DS_Store
+.idea
