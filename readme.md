@@ -13,6 +13,6 @@ PASSWORD=<contraseña>
 * `npm run start course <course-url>`
 
 ## todo
-[ ] agregar tests!
-[ ] hacer el código más lindo (Aún no cacho mucho de node :))
-[ ] hacerlo ejecutable (Terminarlo...)
+* agregar tests!
+* hacer el código más lindo (Aún no cacho mucho de node :))
+* hacerlo ejecutable (Terminarlo...)
