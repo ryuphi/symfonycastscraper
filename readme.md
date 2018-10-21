@@ -1,6 +1,6 @@
 # symfonycast course downloader!
 
-Un scrapercito para descargar un curso desde [Symfonycast](https://symfonycast.com).
+Un scrapercito para descargar un curso desde [Symfonycast](https://symfonycasts.com).
 
 Se creará en la raíz un folder llamado `course` donde contandrá todos los cursos que se descarguen. Se genera una carpeta para cada curso y lección donde descargará 2 archivos (idealmente). Uno será el video y el otro los subtítulos `<lesson-name>.mp4 y <lesson-name>.vtt` respectivamente.
 
