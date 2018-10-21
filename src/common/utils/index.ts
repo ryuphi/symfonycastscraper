@@ -3,6 +3,12 @@ const getRandomNumber = (min: number, max: number) =>
 
 const getMilisecondsFromSeconds = (seconds: number): number => seconds * 1000;
 
+function millisToMinutesAndSeconds (millis: number) {
+    let minutes = Math.floor(millis / 60000);
+    let seconds = parseInt(((millis % 60000) / 1000).toFixed(0));
+    return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
+};
+
 const waitFor = (timeout: number): Promise<void> =>
     new Promise(resolve => {
         setTimeout(resolve, timeout);
@@ -56,6 +62,7 @@ function mkDirByPathSync(targetDir, { isRelativeToScript = false } = {}) {
 }
 
 export {
+    millisToMinutesAndSeconds,
     getMilisecondsFromSeconds,
     waitFor,
     reduceAsync,

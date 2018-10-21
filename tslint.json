@@ -4,7 +4,7 @@
   "rules": {
     "align": false,
     "ter-arrow-parens": false,
-    "prefer-array-literal": false
+    "prefer-array-literal": false,
   },
   "rulesDirectory": []
 }
