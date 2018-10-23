@@ -10,6 +10,8 @@ const getLessonInfo: GetLessonInfo = async function getLessonInfo(page, index) {
     const subtitle = await page.evaluate(() => {
         const { video } = window as any;
 
+        if (undefined === video) return null;
+
         let captionDetails = video.captionDetails || null;
 
         if (! captionDetails) return null;
@@ -19,12 +21,20 @@ const getLessonInfo: GetLessonInfo = async function getLessonInfo(page, index) {
 
     const videoUrl = await page.evaluate(() => {
         const { scraper } = window as any;
-        return scraper.findOne({selector: 'video#js-video-player_html5_api'}).getAttr('src');
+        const element = scraper.findOne({selector: 'video#js-video-player_html5_api'});
+
+        if (null === element) return '';
+
+        return element.getAttr('src');
     });
 
     const script = await page.evaluate(() => {
         const { scraper } = window as any;
-        return scraper.findOne({ selector: 'a[data-download-type="script"]'}).getAttr('href');
+        const element = scraper.findOne({ selector: 'a[data-download-type="script"]'});
+
+        if (null === element) return '';
+
+        return element.getAttr('href');
     });
 
     return {

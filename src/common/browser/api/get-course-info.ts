@@ -27,7 +27,7 @@ const getCourseInfo: GetCourseInfo = async function getCourseInfo(page) {
 
         return scraper
             // not comming soon...
-            .find({ selector: '.title.chapter-list-item > .row div:first-child a:not(.js-no-follow-link)'})
+            .find({ selector: '.title.chapter-list-item > .row div:first-child a:not(.js-no-follow-link):not(.challenge-square)'})
             .map(el => el.getAttr('href'))
     });
 
